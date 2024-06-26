@@ -3,7 +3,20 @@ import { motion } from "framer-motion";
 import { Nav } from "../Nav/Nav";
 
 export const About = () => {
+  const skillImages = [
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg",
+  ];
 
+  const icones = [
+    { id: 1, url: process.env.PUBLIC_URL + "/icones/gmail.png",link:"mailto:renatomorillo@gmail.com" },
+    { id: 2, url: process.env.PUBLIC_URL + "/icones/linkedin.png", link:"https://www.linkedin.com/in/renato-morillo-b91a761b4/"},
+    { id: 3, url: process.env.PUBLIC_URL + "/icones/whatsapp.png",link:"https://wa.me/5516997410581" },
+  ];
 
   return (
     <Flex
@@ -17,6 +30,7 @@ export const About = () => {
       backgroundSize="cover"
       backgroundPosition="center"
       color="white"
+      position="relative"
     >
       <Nav />
       <Flex width="100%" flex="1" direction="row">
@@ -62,81 +76,29 @@ export const About = () => {
             Minhas habilidades
           </Heading>
           <Flex
-          display="flex"
-          justifyContent="center"
-          alignItems="center"
-          backgroundColor="rgba(255, 255, 255, 0.1)"
-          p={4}
-          borderRadius="md"
-          boxShadow="0 4px 8px rgba(0, 0, 0, 0.1)">
-            <motion.div
-              whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <Image
-                height="10vh"
-                width="10vw"
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg"
-                mx={2}
-              />
-            </motion.div>
-            <motion.div
-              whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <Image
-                height="10vh"
-                width="10vw"
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg"
-                mx={2}
-              />
-            </motion.div>
-            <motion.div
-              whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <Image
-                height="10vh"
-                width="10vw"
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg"
-                mx={2}
-              />
-            </motion.div>
-            <motion.div
-              whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <Image
-                height="10vh"
-                width="10vw"
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
-                mx={2}
-              />
-            </motion.div>
-            <motion.div
-              whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <Image
-                height="10vh"
-                width="10vw"
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg"
-                mx={2} 
-              />
-             
-            </motion.div>
-            <motion.div
-              whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <Image
-                height="10vh"
-                width="10vw"
-                src=" https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg"
-                mx={2} 
-              />
-      
-            </motion.div>
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            backgroundColor="rgba(255, 255, 255, 0.1)"
+            p={4}
+            borderRadius="md"
+            boxShadow="0 4px 8px rgba(0, 0, 0, 0.1)"
+          >
+            {skillImages.map((src, index) => (
+              <motion.div
+                key={index}
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                <Image
+                  height="10vh"
+                  width="10vw"
+                  src={src}
+                  mx={2}
+                  cursor="pointer"
+                />
+              </motion.div>
+            ))}
           </Flex>
         </Flex>
         <Flex
@@ -161,6 +123,37 @@ export const About = () => {
             />
           </motion.div>
         </Flex>
+      </Flex>
+    
+      <Flex
+        position="absolute"
+        bottom={4}
+        right={4}
+        direction="row"
+        justifyContent="flex-end"
+        alignItems="center"
+        gap={4}
+      >
+        {icones.map((icone) => (
+
+          <motion.div
+          key={icone.id}
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.9 }}
+          >
+          <Image
+            key={icone.id}
+            boxSize="60px"
+            src={icone.url}
+            mx={2}
+            cursor="pointer"
+            onClick={() => window.open(icone.link, '_blank')}
+          />
+          </motion.div>
+                
+        ))}
+
+         
       </Flex>
     </Flex>
   );
