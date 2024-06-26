@@ -1,4 +1,4 @@
-import { Flex, Heading, Image, Text } from "@chakra-ui/react";
+import { Flex, Heading, Image } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { Nav } from "../Nav/Nav";
 
@@ -39,7 +39,7 @@ export const About = () => {
           width="50%"
           p={4}
           justify="center"
-          backgroundColor="rgba(0, 0, 0, 0.5)"
+          backgroundColor="rgba(0, 0, 0, 0.6)"
           borderRadius="md"
         >
           <motion.div
@@ -47,6 +47,14 @@ export const About = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 2 }}
           >
+            <Heading as="h4"
+              size="md"
+              bgGradient="linear(to-r,  purple.400, blue.400)"
+              bgClip="text"
+              textAlign="left"
+              fontWeight="bold">
+              Olá! Meu nome é 
+            </Heading>
             <Heading
               as="h3"
               size="lg"
@@ -55,15 +63,20 @@ export const About = () => {
               textAlign="left"
               fontWeight="bold"
             >
-              Olá! Meu nome é Renato Porto Morillo,
+              Renato Porto Morillo,
             </Heading>
-            <Text mb={4}>
+            <Heading as="h4"
+              size="md"
+              bgGradient="linear(to-r, purple.400, blue.400)"
+              bgClip="text"
+              textAlign="left"
+              fontWeight="bold">
               sou um desenvolvedor web full stack apaixonado por criar soluções
               digitais inovadoras e eficientes. Com anos de experiência na área,
               tenho habilidade em todas as etapas do desenvolvimento web, desde a
               concepção inicial e design até a implementação e manutenção de
               aplicativos complexos.
-            </Text>
+            </Heading>
           </motion.div>
           <Heading
             as="h2"
@@ -107,7 +120,7 @@ export const About = () => {
           p={4}
           justifyContent="center"
           alignItems="center"
-          backgroundColor="rgba(0, 0, 0, 0.5)"
+          backgroundColor="rgba(0, 0, 0, 0.6)"
           borderRadius="md"
         >
           <motion.div
@@ -133,6 +146,10 @@ export const About = () => {
         justifyContent="flex-end"
         alignItems="center"
         gap={4}
+        backgroundColor="rgba(255, 255, 255, 0.1)"
+        p={4}
+        borderRadius="md"
+        boxShadow="0 4px 8px rgba(0, 0, 0, 0.1)"
       >
         {icones.map((icone) => (
 
