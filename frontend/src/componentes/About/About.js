@@ -16,6 +16,7 @@ export const About = () => {
     { id: 1, url: process.env.PUBLIC_URL + "/icones/gmail.png",link:"mailto:renatomorillo@gmail.com" },
     { id: 2, url: process.env.PUBLIC_URL + "/icones/linkedin.png", link:"https://www.linkedin.com/in/renato-morillo-b91a761b4/"},
     { id: 3, url: process.env.PUBLIC_URL + "/icones/whatsapp.png",link:"https://wa.me/5516997410581" },
+    { id: 4, url: process.env.PUBLIC_URL + "/icones/github-logo.png",link:"https://github.com/renatoxd152" }
   ];
 
   return (
@@ -71,7 +72,7 @@ export const About = () => {
               bgClip="text"
               textAlign="left"
               fontWeight="bold">
-              sou um desenvolvedor web full stack apaixonado por criar soluções
+              sou um desenvolvedor web full stack que desenvolve soluções
               digitais inovadoras e eficientes. Com anos de experiência na área,
               tenho habilidade em todas as etapas do desenvolvimento web, desde a
               concepção inicial e design até a implementação e manutenção de
@@ -92,7 +93,7 @@ export const About = () => {
             display="flex"
             justifyContent="center"
             alignItems="center"
-            backgroundColor="rgba(255, 255, 255, 0.1)"
+            backgroundColor="rgba(255, 255, 255, 0.3)"
             p={4}
             borderRadius="md"
             boxShadow="0 4px 8px rgba(0, 0, 0, 0.1)"
@@ -146,7 +147,7 @@ export const About = () => {
         justifyContent="flex-end"
         alignItems="center"
         gap={4}
-        backgroundColor="rgba(255, 255, 255, 0.1)"
+        backgroundColor="rgba(255, 255, 255, 0.3)"
         p={4}
         borderRadius="md"
         boxShadow="0 4px 8px rgba(0, 0, 0, 0.1)"
