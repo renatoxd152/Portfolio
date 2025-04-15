@@ -1,16 +1,19 @@
 import React from "react";
 import "../../pages/index.css";
+
 export const About: React.FC = () => {
     return (
         <div className="d-flex flex-column min-vh-100" style={{ background: "linear-gradient(135deg, #f8f9fa, #e9ecef)" }}>
             <main className="flex-grow-1 mt-5" id="about">
+                {/* Mantenha o título centralizado */}
                 <h1 className="mb-4 text-primary fw-bold text-center">Um pouco sobre mim</h1>
                 <p className="mb-4 text-center">Aqui você encontra um pouco sobre mim e as linguagens que utilizo</p>
+                
                 <div className="container py-5">
                     <div className="row g-4">
-                        <aside className="col-md-4 text-center p-5 rounded">
+                        <aside className="col-md-4 p-5 rounded">
                             <div className="d-flex flex-column justify-content-center h-100">
-                                <div className="lead text-muted">
+                                <div className="lead text-muted text-start">
                                     <p>
                                         Sou um desenvolvedor web fullstack focado em soluções modernas e eficientes.
                                         Confira alguns dos meus projetos na seção de portfólio.
@@ -28,8 +31,8 @@ export const About: React.FC = () => {
                         </aside>
 
                         <article className="col-md-8">
-                            <section className="text-center">
-                                <h2 className="mb-5 text-dark fw-bold">Minhas Habilidades</h2>
+                            <section>
+                                <h2 className="mb-5 text-dark fw-bold text-center">Minhas Habilidades</h2>
                                 <div className="row justify-content-center gy-4">
                                     {skills.map((skill, index) => (
                                         <div className="col-6 col-md-4 col-lg-3" key={index}>

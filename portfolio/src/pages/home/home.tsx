@@ -9,7 +9,7 @@ export const Home: React.FC = () => {
                         <div className="row justify-content-center">
                             <div className="col-md-8">
                                 <h1 className="display-4 mb-3">Olá, meu nome é Renato</h1>
-                                <p className="lead mb-4">
+                                <p className="lead mb-4 text-start">
                                     Sou um desenvolvedor web focado na criação de aplicações de alta performance
                                     que impulsionam o sucesso de produtos digitais.
                                 </p>
